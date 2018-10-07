@@ -18,14 +18,20 @@
 </head>
 <body>
     <div class="container">
-        <h1>PWA Demo with JSON data</h1>
+        <div class="header">
+            <h1>PWA Demo with JSON data</h1>
+        </div>
         <div class="results">
+        </div>
+        <div class="footer">
+            <p class="left">Made by <a href="https://github.com/MiguelFernandez008/" target="_blank">Miguel Fernández</a></p>
+            <p class="right"></p>
         </div>
     </div>
     <script>
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('/sw.js')
-                .then(res => console.log('Service worker registration succeeded:', res))
+                .then(res => console.log('Service worker registration succeeded:'))
                 .catch(error => console.error(error));
         } else {
             console.error('Service workers are not supported.');
